@@ -15,5 +15,9 @@ class Homerseklet
         double atlag = homer.Average();
 
         Console.WriteLine($"Kéthetes átlaghőmérséklet: {atlag}°C \n");
+
+        int max = homer.Max();
+
+        Console.WriteLine($"A legmagasabb hőmérséklet: {max}°C \n");
     }
 }
