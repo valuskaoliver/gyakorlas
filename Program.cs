@@ -7,9 +7,13 @@ class Homerseklet
 {
     static void Main(string[] args)
     { 
-
-        List<int> homer = File.ReadAllLines("homersekletek.txt").Select(int.Parse).ToList();
+        string[] lines = File.ReadAllLines("homersekletek.txt");
+        List<int> homer = lines.Select(int.Parse).ToList();
         
-        Console.WriteLine($"A beolvasott napok száma: {homer.Count()}");
+        Console.WriteLine($"A beolvasott napok száma: {homer.Count()} \n");
+
+        double atlag = homer.Average();
+
+        Console.WriteLine($"Kéthetes átlaghőmérséklet: {atlag}°C \n");
     }
 }
